@@ -99,7 +99,7 @@ function GiftCard() {
     return (
         <div className="giftcard-wrapper">
             <div className="giftcard-type-wrapper">
-                <h2>E-CARD</h2>
+                <h2>E-CARD TEST</h2>
                 <p>Select an amount between $25-$500 USD</p>
                 <select className="amount-selector" onChange={handleAmountChange}>
                     <option value="none">Select amount</option>

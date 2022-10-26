@@ -20,18 +20,25 @@ export default function(): Configuration {
             extensions: [".js", ".jsx", ".ts", ".tsx", ".css"]
         },
         output: {
-            filename: "js/bundle.min.js",
+            filename: "[name].bundle.js",
             path: resolve(__dirname, "dist"),
             publicPath: "dist/",
+            chunkFilename: '[id].[chunkhash].js'
         },
         watch: true,
         optimization: {
-            usedExports: true
+            usedExports: true,
+/*             splitChunks: {
+                // include all types of chunks
+                chunks: 'all',
+                maxSize: 2000,
+                minSize: 200
+              }, */
         },
         devServer: {
             static: [
                 {
-                    directory: path.join(__dirname, 'dist/js'),
+                    directory: path.join(__dirname, 'dist'),
                 },
                 {
                     directory: path.join(__dirname, 'components'),
@@ -45,7 +52,7 @@ export default function(): Configuration {
             rules: [
                 {
                     test: /\.(.jsx?|tsx?)$/,
-                    loader: "ts-loader"
+                    loader: "ts-loader",
                 },
                 {
                     test: /\.css$/,

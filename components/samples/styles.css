@@ -1,0 +1,17 @@
+.sample-content{
+    margin: 0;
+    align-items: center;
+
+}
+
+.samples-body{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 500px;
+}
+
+.samples-product-card{
+    display: flex;
+    flex-direction: column;
+}

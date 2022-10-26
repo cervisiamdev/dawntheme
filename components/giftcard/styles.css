@@ -1,0 +1,22 @@
+.send-form{
+    display: flex;
+}
+
+.left-side{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.right-side{
+    display: flex;
+    flex-direction: column;
+}
+
+#message-text{
+    height: 36px;
+}
+
+.react-datepicker-popper{
+    z-index: 999;
+}

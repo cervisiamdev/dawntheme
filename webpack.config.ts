@@ -28,6 +28,15 @@ export default function(): Configuration {
         watch: true,
         optimization: {
             usedExports: true,
+            splitChunks: {
+                cacheGroups: {
+                  vendor: {
+                    test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+                    name: 'vendor',
+                    chunks: 'all',
+                  }
+                }
+              }
 /*             splitChunks: {
                 // include all types of chunks
                 chunks: 'all',
